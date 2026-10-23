@@ -1,0 +1,177 @@
+/* =========================================
+   5.4: CSS VARIABLES USING :root
+   Store colours and spacing in one place
+========================================= */
+
+:root {
+    --brand: #2f5bea;
+    --light: #eef2ff;
+    --dark: #1b2440;
+    --gap: 16px;
+}
+
+
+/* =========================================
+   5.2 (a): UNIVERSAL SELECTOR (*)
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   5.3: FONTS, COLOURS AND LINE-HEIGHT
+========================================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: var(--gap);
+}
+
+
+/* =========================================
+   5.2 (b): ELEMENT SELECTOR (h1)
+========================================= */
+
+h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   5.2 (c): CLASS SELECTOR (.card)
+========================================= */
+
+.card {
+    background: white;
+    padding: var(--gap);
+    margin: 0 auto 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 3px 10px rgba(27, 36, 64, 0.08);
+}
+
+
+/* =========================================
+   5.2 (d): ID SELECTOR (#hero)
+========================================= */
+
+#hero {
+    background: var(--brand);
+    color: white;
+    text-align: center;
+    padding: 32px var(--gap);
+    border-radius: 10px;
+    margin: 0 auto 24px;
+    max-width: 900px;
+}
+
+#hero p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   TABLE STYLING
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+th {
+    background: var(--brand);
+    color: white;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+tbody tr:hover {
+    background: var(--light);
+}
+
+
+/* =========================================
+   REGISTRATION FORM STYLING
+========================================= */
+
+label {
+    display: block;
+    margin-top: 8px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus {
+    outline: 2px solid var(--brand);
+}
+
+button {
+    background: var(--brand);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--dark);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        font-size: 13px;
+    }
+}
