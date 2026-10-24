@@ -1,0 +1,300 @@
+/* QUESTION 6.1: BOX MODEL */
+
+* {
+    box-sizing: border-box;
+    margin:10px;
+    padding:10px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4ff;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* QUESTION 6.4: STICKY HEADER */
+
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 20px;
+    text-align: center;
+    background: #172554;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px #0002;
+}
+
+
+/* QUESTION 6.2: PROFILE CARDS */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.card {
+    width: 300px;
+    padding: 30px 24px;
+    border: 2px solid;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 10px 25px #243b6415;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* QUESTION 6.2: TWO COLOUR VERSIONS */
+
+.blue-card {
+    border-color: #3b82f6;
+}
+
+.purple-card {
+    border-color: #a855f7;
+}
+
+/* Hover effect */
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px #243b6425;
+}
+
+
+/* QUESTION 6.2: CIRCULAR AVATAR */
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #60a5fa, #1d4ed8);
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #2563eb30;
+}
+
+.purple-card .avatar {
+    background: linear-gradient(135deg, #d8b4fe, #9333ea);
+    box-shadow: 0 5px 15px #9333ea30;
+}
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.role {
+    display: inline-block;
+    margin: 5px 0 20px;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.purple-card .role {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+
+/* QUESTION 6.3: SCROLLABLE BIO */
+
+.bio {
+    height: 100px;
+    overflow: auto;
+    padding: 12px;
+    border: 1px solid #dbe2ef;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #475569;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* QUESTION 6.4: FIXED FLOATING BUTTON */
+
+.fab {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 20;
+    width: 58px;
+    height: 58px;
+    border: none;
+    border-radius: 50%;
+    background: #fbbf24;
+    color: #172554;
+    font-size: 34px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #0003;
+    transition: transform 0.2s ease;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+    background: #f59e0b;
+}
+
+
+/* QUESTION 6.5: FOOTER AND RESPONSIVE DESIGN */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+    /* Fix profile card layout */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.card {
+    width: 300px;
+    flex: 0 0 300px;
+    padding: 25px;
+    margin: 0;
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 8px 20px #0002;
+}
+
+.purple-card {
+    border-color: #a855f7;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    font-size: 36px;
+    line-height: normal;
+}
+
+.bio {
+    height: 100px;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    /* FIX: Profile cards not appearing properly */
+
+.container,
+.profile-container {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* Match both possible card class names */
+.card,
+.profile-card {
+    display: block;
+    box-sizing: border-box;
+    flex: 0 1 300px;
+    width: 300px;
+    max-width: 100%;
+    margin: 0;
+    padding: 25px;
+    background: #ffffff;
+    border: 2px solid #3b82f6;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px #0002;
+}
+
+/* Second card colour */
+.purple-card {
+    border-color: #a855f7;
+}
+
+/* Keep bio inside the card */
+.bio {
+    display: block;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Center the avatar */
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    line-height: normal;
+}
+
+@media (max-width: 650px) {
+    .container,
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .profile-card {
+        width: 300px;
+        max-width: 100%;
+        flex-basis: auto;
+    }
+}
+}
+}
