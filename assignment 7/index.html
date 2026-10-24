@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Dashboard</title>
+
+    <!-- External CSS file connected here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main dashboard layout: Point 8.1 and 8.3 are styled in CSS -->
+    <div class="layout">
+
+        <!-- HEADER: Point 8.3 (grid area: head) -->
+        <header>
+            <h2>My Dashboard</h2>
+        </header>
+
+        <!-- SIDEBAR: Point 8.3 (grid area: side) -->
+        <aside>
+            <h3>Menu</h3>
+
+            <ul>
+                <li>Home</li>
+                <li>Reports</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <!-- MAIN AREA: Dashboard boxes -->
+        <main>
+
+            <!-- Gallery uses CSS Grid: Point 8.1 and 8.2 -->
+            <div class="gallery">
+
+                <!-- Each item uses Flexbox: Point 8.4 -->
+                <div class="item">
+                    <span class="icon">&#128100;</span>
+                    <div><b>120</b><br>Users</div>
+                </div>
+
+                <div class="item">
+                    <span class="icon">&#128176;</span>
+                    <div><b>Rs 45k</b><br>Sales</div>
+                </div>
+
+                <div class="item">
+                    <span class="icon">&#128230;</span>
+                    <div><b>36</b><br>Orders</div>
+                </div>
+
+                <div class="item">
+                    <span class="icon">&#11088;</span>
+                    <div><b>4.8</b><br>Rating</div>
+                </div>
+
+                <div class="item">
+                    <span class="icon">&#128172;</span>
+                    <div><b>18</b><br>Messages</div>
+                </div>
+
+                <div class="item">
+                    <span class="icon">&#9989;</span>
+                    <div><b>92%</b><br>Done</div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER: Point 8.3 (grid area: foot) -->
+        <footer>
+            Made with CSS Grid
+        </footer>
+
+    </div>
+
+</body>
+</html>

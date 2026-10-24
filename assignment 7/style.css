@@ -1,0 +1,137 @@
+/* General styling: removes default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background and font */
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f8;
+}
+
+/* =================================================
+   POINT 8.1: CSS GRID
+   display: grid, columns, fr unit and gap
+   ================================================= */
+.layout {
+    display: grid;
+
+    /* Sidebar = 170px, remaining space = 1fr */
+    grid-template-columns: 170px 1fr;
+
+    /* POINT 8.3: Naming the four layout areas */
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+
+    gap: 10px;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+/* =================================================
+   POINT 8.3: Assigning names to grid areas
+   ================================================= */
+
+/* Header occupies the top row */
+header {
+    grid-area: head;
+    background: #12203a;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    min-height: 120px;
+}
+
+/* Sidebar occupies the left side */
+aside {
+    grid-area: side;
+    background: #dbe5f5;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+/* Menu list styling */
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin: 8px 0;
+}
+
+/* Main area occupies the right side */
+main {
+    grid-area: main;
+    padding: 0;
+}
+
+/* Footer occupies the bottom row */
+footer {
+    grid-area: foot;
+    background: #12203a;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    min-height: 100px;
+}
+
+/* =================================================
+   POINT 8.2: AUTO-FIT AND MINMAX
+   Boxes automatically rearrange according to space
+   ================================================= */
+.gallery {
+    display: grid;
+
+    /* Automatically fits boxes into available space.
+       Each box is at least 150px wide. */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    /* Space between dashboard boxes */
+    gap: 12px;
+}
+
+/* =================================================
+   POINT 8.4: FLEXBOX INSIDE EACH GRID BOX
+   Icon and text appear side by side
+   ================================================= */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: white;
+    padding: 16px;
+    border-radius: 10px;
+
+    /* Keeps each dashboard box readable */
+    min-width: 0;
+}
+
+/* Dashboard icons */
+.icon {
+    font-size: 28px;
+}
+
+/* Small-screen support */
+@media (max-width: 500px) {
+    .layout {
+        /* Sidebar moves above main on narrow screens */
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+}
+
+/* =================================================
+   POINT 8.5: GRID INSPECTOR
+   No extra CSS property is required for this point.
+   Inspect the grid in browser Developer Tools.
+   ================================================= */
