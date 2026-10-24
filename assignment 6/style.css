@@ -1,0 +1,179 @@
+/* ========== COMMON SETTINGS ========== */
+/* Default margin aur padding remove ki hai */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #12203a;
+}
+
+
+/* ================= 7.1 NAVBAR ================= */
+/* display:flex = items ek row mein */
+/* space-between = logo left, links/button right */
+/* align-items:center = vertically centre */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: #12203a;
+    color: white;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+/* Navigation links ko ek row mein rakha hai */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Links ka colour white aur underline remove */
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Common button styling */
+
+.btn {
+    background: #ffb703;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ================= 7.2 BANNER ================= */
+/* flex-direction:column = items upar se neeche */
+/* justify-content:center = vertical centre */
+/* align-items:center = horizontal centre */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 300px;
+    padding: 16px;
+    text-align: center;
+    background: #2f5bea;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* ================= 7.3 CARDS ================= */
+/* flex-wrap:wrap = jagah kam ho to next line */
+/* gap = cards ke beech space */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 24px;
+}
+
+/* flex: 1 1 200px
+   1 = grow
+   1 = shrink
+   200px = initial basis */
+
+.card {
+    flex: 1 1 200px;
+    background: #eef2ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+
+/* ================= 7.4 LANDING PAGE ================= */
+/* Navbar, banner aur cards HTML mein ek saath hain.
+   Upar ke CSS rules milkar complete page banate hain. */
+
+
+/* ================= 7.5 RESPONSIVE DESIGN ================= */
+/* 600px ya usse chhoti screen ke liye styling */
+
+@media (max-width: 600px) {
+
+    /* Navbar items ko zaroorat par next line mein aane do */
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    /* Mobile par heading ka size chhota */
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+.fab{
+    width: 58px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background: #fbbf24;
+    color: #172554;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #0003;
+    transition: transform 0.2s ease;
+}
+.fab:hover {
+    transform: scale(1.1);
+    background: #f59e0b;
+}
+
+.fab-signup{
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background: #fbbf24;
+    color: #172554;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #0003;
+    transition: transform 0.2s ease;
+}
+.fab-signup:hover {
+    transform: scale(1.1);
+    background: #f59e0b;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeLab</title>
+
+    <!-- External CSS file ko connect kiya hai -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= 7.1 NAVBAR ================= -->
+    <!-- Logo left, links aur Sign up button right -->
+
+    <nav>
+        <h2>CodeLab</h2>
+
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- Navbar button -->
+        <button class="fab-signup"
+                type="button"
+                aria-label="Add profile"
+                onclick="alert('Sign Up button clicked!')">
+            Sign Up
+        </button>
+    </nav>
+
+
+    <!-- ================= 7.2 BANNER ================= -->
+    <!-- Banner ke text aur button ko centre mein rakha hai -->
+
+    <section class="hero">
+        <h1>Learn Web Development</h1>
+        <p>Start from zero. Build real projects.</p>
+        <button class="fab"
+                type="button"
+                aria-label="Add profile"
+                onclick="alert('Get Started button clicked!')">
+            Get Started
+        </button>
+    </section>
+
+
+    <!-- ================= 7.3 CARDS ================= -->
+    <!-- Flexbox se 4 cards banaye hain.
+         Chhoti screen par cards next line mein aa sakte hain. -->
+
+    <section class="cards">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Build the structure</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Make it beautiful</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Make it smart</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <h3>Git</h3>
+            <p>Save your work</p>
+        </div>
+
+    </section>
+
+    <!-- ========== 7.4 COMPLETE LANDING PAGE ========== -->
+    <!-- Navbar + Banner + Cards ko ek page mein joda hai -->
+
+    <!-- ========== 7.5 RESPONSIVE TESTING ========== -->
+    <!-- Desktop, tablet aur mobile par browser ki width
+         badal kar layout check karna hai.
+         Iski CSS style.css mein likhi hai. -->
+
+</body>
+</html>
